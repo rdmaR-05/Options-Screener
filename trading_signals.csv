@@ -1,0 +1,229 @@
+Stock,Signal,Confidence,Strategy
+AARTIIND,BUY VOLATILITY,Medium,Long Straddle/Strangle
+ABB,BUY VOLATILITY,Medium,Long Straddle/Strangle
+ABBOTINDIA,NEUTRAL,Medium,Iron Condor
+ABCAPITAL,NEUTRAL,Medium,Iron Condor
+ABFRL,NEUTRAL,Medium,Iron Condor
+ACC,BUY VOLATILITY,Medium,Long Straddle/Strangle
+ADANIENSOL,BUY VOLATILITY,Medium,Long Straddle/Strangle
+ADANIENT,NEUTRAL,Medium,Iron Condor
+ADANIGREEN,BUY VOLATILITY,Medium,Long Straddle/Strangle
+ADANIPORTS,SELL,Medium,Bear Put Spread
+ALKEM,BUY VOLATILITY,Medium,Long Straddle/Strangle
+AMBUJACEM,BUY VOLATILITY,Medium,Long Straddle/Strangle
+ANGELONE,BUY VOLATILITY,Medium,Long Straddle/Strangle
+APLAPOLLO,BUY VOLATILITY,Medium,Long Straddle/Strangle
+APOLLOHOSP,BUY VOLATILITY,Medium,Long Straddle/Strangle
+APOLLOTYRE,BUY,Medium,Bull Call Spread
+ASHOKLEY,NEUTRAL,Medium,Iron Condor
+ASIANPAINT,BUY VOLATILITY,Medium,Long Straddle/Strangle
+ASTRAL,BUY VOLATILITY,Medium,Long Straddle/Strangle
+ATGL,BUY,High,Bull Call Spread
+ATUL,BUY VOLATILITY,Medium,Long Straddle/Strangle
+AUBANK,BUY VOLATILITY,Medium,Long Straddle/Strangle
+AUROPHARMA,NEUTRAL,Medium,Iron Condor
+AXISBANK,NEUTRAL,Medium,Iron Condor
+BAJAJ,NEUTRAL,Medium,Iron Condor
+BAJAJFINSV,SELL,Medium,Bear Put Spread
+BAJFINANCE,BUY VOLATILITY,Medium,Long Straddle/Strangle
+BALKRISIND,BUY VOLATILITY,Medium,Long Straddle/Strangle
+BANDHANBNK,SELL,Medium,Bear Put Spread
+BANKBARODA,BUY VOLATILITY,Medium,Long Straddle/Strangle
+BANKINDIA,NEUTRAL,Medium,Iron Condor
+BATAINDIA,BUY VOLATILITY,Medium,Long Straddle/Strangle
+BEL,NEUTRAL,Medium,Iron Condor
+BERGEPAINT,NEUTRAL,Medium,Iron Condor
+BHARATFORG,NEUTRAL,Medium,Iron Condor
+BHARTIARTL,BUY VOLATILITY,Medium,Long Straddle/Strangle
+BHEL,BUY VOLATILITY,Medium,Long Straddle/Strangle
+BIOCON,BUY VOLATILITY,Medium,Long Straddle/Strangle
+BOSCHLTD,BUY VOLATILITY,Medium,Long Straddle/Strangle
+BPCL,SELL,Medium,Bear Put Spread
+BRITANNIA,BUY VOLATILITY,Medium,Long Straddle/Strangle
+BSE,BUY VOLATILITY,Medium,Long Straddle/Strangle
+BSOFT,BUY VOLATILITY,Medium,Long Straddle/Strangle
+CAMS,BUY VOLATILITY,Medium,Long Straddle/Strangle
+CANBK,NEUTRAL,Medium,Iron Condor
+CANFINHOME,BUY,High,Bull Call Spread
+CDSL,NEUTRAL,Medium,Iron Condor
+CESC,BUY VOLATILITY,Medium,Long Straddle/Strangle
+CGPOWER,NEUTRAL,Medium,Iron Condor
+CHAMBLFERT,BUY VOLATILITY,Medium,Long Straddle/Strangle
+CHOLAFIN,NEUTRAL,Medium,Iron Condor
+CIPLA,BUY VOLATILITY,Medium,Long Straddle/Strangle
+COALINDIA,BUY VOLATILITY,Medium,Long Straddle/Strangle
+COFORGE,BUY VOLATILITY,Medium,Long Straddle/Strangle
+COLPAL,NEUTRAL,Medium,Iron Condor
+CONCOR,BUY VOLATILITY,Medium,Long Straddle/Strangle
+COROMANDEL,BUY,Medium,Bull Call Spread
+CROMPTON,NEUTRAL,Medium,Iron Condor
+CUB,BUY VOLATILITY,Medium,Long Straddle/Strangle
+CUMMINSIND,BUY VOLATILITY,Medium,Long Straddle/Strangle
+CYIENT,BUY,Medium,Bull Call Spread
+DABUR,NEUTRAL,Medium,Iron Condor
+DALBHARAT,BUY VOLATILITY,Medium,Long Straddle/Strangle
+DEEPAKNTR,NEUTRAL,Medium,Iron Condor
+DELHIVERY,BUY VOLATILITY,Medium,Long Straddle/Strangle
+DIVISLAB,BUY VOLATILITY,Medium,Long Straddle/Strangle
+DIXON,BUY VOLATILITY,Medium,Long Straddle/Strangle
+DLF,NEUTRAL,Medium,Iron Condor
+DMART,BUY VOLATILITY,Medium,Long Straddle/Strangle
+DRREDDY,NEUTRAL,Medium,Iron Condor
+EICHERMOT,BUY,Medium,Bull Call Spread
+ESCORTS,BUY,Medium,Bull Call Spread
+EXIDEIND,NEUTRAL,Medium,Iron Condor
+FEDERALBNK,BUY VOLATILITY,Medium,Long Straddle/Strangle
+GAIL,NEUTRAL,Medium,Iron Condor
+GLENMARK,BUY VOLATILITY,Medium,Long Straddle/Strangle
+GMRAIRPORT,NEUTRAL,Medium,Iron Condor
+GNFC,BUY VOLATILITY,Medium,Long Straddle/Strangle
+GODREJCP,BUY VOLATILITY,Medium,Long Straddle/Strangle
+GODREJPROP,NEUTRAL,Medium,Iron Condor
+GRANULES,BUY,Medium,Bull Call Spread
+GRASIM,NEUTRAL,Medium,Iron Condor
+HAL,BUY VOLATILITY,Medium,Long Straddle/Strangle
+HAVELLS,BUY VOLATILITY,Medium,Long Straddle/Strangle
+HCLTECH,BUY VOLATILITY,Medium,Long Straddle/Strangle
+HDFCAMC,BUY VOLATILITY,Medium,Long Straddle/Strangle
+HDFCBANK,BUY VOLATILITY,Medium,Long Straddle/Strangle
+HDFCLIFE,NEUTRAL,Medium,Iron Condor
+HEROMOTOCO,BUY VOLATILITY,Medium,Long Straddle/Strangle
+HFCL,BUY,Medium,Bull Call Spread
+HINDALCO,NEUTRAL,Medium,Iron Condor
+HINDCOPPER,BUY VOLATILITY,Medium,Long Straddle/Strangle
+HINDPETRO,BUY,Medium,Bull Call Spread
+HINDUNILVR,BUY VOLATILITY,Medium,Long Straddle/Strangle
+HUDCO,BUY VOLATILITY,Medium,Long Straddle/Strangle
+ICICIBANK,NEUTRAL,Medium,Iron Condor
+ICICIGI,BUY VOLATILITY,Medium,Long Straddle/Strangle
+ICICIPRULI,BUY,Medium,Bull Call Spread
+IDEA,BUY VOLATILITY,Medium,Long Straddle/Strangle
+IDFCFIRSTB,NEUTRAL,Medium,Iron Condor
+IEX,NEUTRAL,Medium,Iron Condor
+IGL,BUY VOLATILITY,Medium,Long Straddle/Strangle
+INDHOTEL,BUY VOLATILITY,Medium,Long Straddle/Strangle
+INDIAMART,NEUTRAL,Medium,Iron Condor
+INDIANB,BUY VOLATILITY,Medium,Long Straddle/Strangle
+INDIGO,BUY VOLATILITY,Medium,Long Straddle/Strangle
+INDUSINDBK,BUY VOLATILITY,Medium,Long Straddle/Strangle
+INDUSTOWER,BUY VOLATILITY,Medium,Long Straddle/Strangle
+INFY,BUY VOLATILITY,Medium,Long Straddle/Strangle
+IOC,BUY VOLATILITY,Medium,Long Straddle/Strangle
+IPCALAB,BUY VOLATILITY,Medium,Long Straddle/Strangle
+IRB,BUY,Medium,Bull Call Spread
+IRCTC,NEUTRAL,Medium,Iron Condor
+IRFC,NEUTRAL,Medium,Iron Condor
+ITC,NEUTRAL,Medium,Iron Condor
+JINDALSTEL,SELL,Medium,Bear Put Spread
+JIOFIN,NEUTRAL,Medium,Iron Condor
+JKCEMENT,BUY,Medium,Bull Call Spread
+JSL,NEUTRAL,Medium,Iron Condor
+JSWENERGY,BUY VOLATILITY,Medium,Long Straddle/Strangle
+JSWSTEEL,BUY VOLATILITY,Medium,Long Straddle/Strangle
+JUBLFOOD,BUY VOLATILITY,Medium,Long Straddle/Strangle
+KALYANKJIL,NEUTRAL,Medium,Iron Condor
+KEI,BUY VOLATILITY,Medium,Long Straddle/Strangle
+KOTAKBANK,BUY VOLATILITY,Medium,Long Straddle/Strangle
+KPITTECH,NEUTRAL,Medium,Iron Condor
+LALPATHLAB,BUY VOLATILITY,Medium,Long Straddle/Strangle
+LAURUSLABS,BUY VOLATILITY,Medium,Long Straddle/Strangle
+LICHSGFIN,NEUTRAL,Medium,Iron Condor
+LICI,BUY VOLATILITY,Medium,Long Straddle/Strangle
+LODHA,BUY VOLATILITY,Medium,Long Straddle/Strangle
+LT,NEUTRAL,Medium,Iron Condor
+LTF,BUY VOLATILITY,Medium,Long Straddle/Strangle
+LTIM,BUY VOLATILITY,Medium,Long Straddle/Strangle
+LTTS,BUY VOLATILITY,Medium,Long Straddle/Strangle
+LUPIN,BUY VOLATILITY,Medium,Long Straddle/Strangle
+M&M,SELL,Medium,Bear Put Spread
+M&MFIN,BUY VOLATILITY,Medium,Long Straddle/Strangle
+MANAPPURAM,BUY VOLATILITY,Medium,Long Straddle/Strangle
+MARICO,BUY VOLATILITY,Medium,Long Straddle/Strangle
+MARUTI,NEUTRAL,Medium,Iron Condor
+MAXHEALTH,BUY VOLATILITY,Medium,Long Straddle/Strangle
+MCX,NEUTRAL,Medium,Iron Condor
+METROPOLIS,BUY VOLATILITY,Medium,Long Straddle/Strangle
+MFSL,BUY VOLATILITY,Medium,Long Straddle/Strangle
+MGL,BUY VOLATILITY,Medium,Long Straddle/Strangle
+MOTHERSON,NEUTRAL,Medium,Iron Condor
+MPHASIS,BUY,Medium,Bull Call Spread
+MRF,BUY VOLATILITY,Medium,Long Straddle/Strangle
+MUTHOOTFIN,BUY,Medium,Bull Call Spread
+NATIONALUM,BUY VOLATILITY,Medium,Long Straddle/Strangle
+NAUKRI,NEUTRAL,Medium,Iron Condor
+NAVINFLUOR,NEUTRAL,Medium,Iron Condor
+NBCC,BUY VOLATILITY,Medium,Long Straddle/Strangle
+NCC,BUY,Medium,Bull Call Spread
+NESTLEIND,BUY VOLATILITY,Medium,Long Straddle/Strangle
+NHPC,BUY,High,Bull Call Spread
+NIFTY,BUY VOLATILITY,Medium,Long Straddle/Strangle
+NMDC,NEUTRAL,Medium,Iron Condor
+NTPC,SELL,High,Bear Put Spread
+NYKAA,BUY,Medium,Bull Call Spread
+OBEROIRLTY,BUY VOLATILITY,Medium,Long Straddle/Strangle
+OFSS,NEUTRAL,Medium,Iron Condor
+OIL,BUY,Medium,Bull Call Spread
+ONGC,BUY VOLATILITY,Medium,Long Straddle/Strangle
+PAGEIND,BUY VOLATILITY,Medium,Long Straddle/Strangle
+PAYTM,NEUTRAL,Medium,Iron Condor
+PAYTM,NEUTRAL,Medium,Iron Condor
+PEL,BUY VOLATILITY,Medium,Long Straddle/Strangle
+PERSISTENT,NEUTRAL,Medium,Iron Condor
+PETRONET,NEUTRAL,Medium,Iron Condor
+PFC,SELL,Medium,Bear Put Spread
+PHOENIXLTD,BUY VOLATILITY,Medium,Long Straddle/Strangle
+PIDILITIND,BUY VOLATILITY,Medium,Long Straddle/Strangle
+PIIND,BUY VOLATILITY,Medium,Long Straddle/Strangle
+PNB,NEUTRAL,Medium,Iron Condor
+POLICYBZR,BUY VOLATILITY,Medium,Long Straddle/Strangle
+POLYCAB,NEUTRAL,Medium,Iron Condor
+POONAWALLA,NEUTRAL,Medium,Iron Condor
+POWERGRID,BUY VOLATILITY,Medium,Long Straddle/Strangle
+PRESTIGE,BUY VOLATILITY,Medium,Long Straddle/Strangle
+PVRINOX,BUY VOLATILITY,Medium,Long Straddle/Strangle
+RAMCOCEM,BUY VOLATILITY,Medium,Long Straddle/Strangle
+RBLBANK,NEUTRAL,Medium,Iron Condor
+RECLTD,SELL,Medium,Bear Put Spread
+RELIANCE,BUY VOLATILITY,Medium,Long Straddle/Strangle
+SAIL,NEUTRAL,Medium,Iron Condor
+SBICARD,BUY VOLATILITY,Medium,Long Straddle/Strangle
+SBILIFE,SELL,Medium,Bear Put Spread
+SBIN,BUY VOLATILITY,Medium,Long Straddle/Strangle
+SHREECEM,BUY VOLATILITY,Medium,Long Straddle/Strangle
+SHRIRAMFIN,NEUTRAL,Medium,Iron Condor
+SIEMENS,NEUTRAL,Medium,Iron Condor
+SJVN,BUY,High,Bull Call Spread
+SOLARINDS,BUY VOLATILITY,Medium,Long Straddle/Strangle
+SONACOMS,BUY VOLATILITY,Medium,Long Straddle/Strangle
+SRF,NEUTRAL,Medium,Iron Condor
+SUNPHARMA,SELL,Medium,Bear Put Spread
+SUNTV,BUY VOLATILITY,Medium,Long Straddle/Strangle
+SUPREMEIND,BUY VOLATILITY,Medium,Long Straddle/Strangle
+SYNGENE,BUY VOLATILITY,Medium,Long Straddle/Strangle
+TATACHEM,SELL,Medium,Bear Put Spread
+TATACOMM,BUY VOLATILITY,Medium,Long Straddle/Strangle
+TATACONSUM,NEUTRAL,Medium,Iron Condor
+TATAELXSI,BUY VOLATILITY,Medium,Long Straddle/Strangle
+TATAMOTORS,BUY VOLATILITY,Medium,Long Straddle/Strangle
+TATAPOWER,BUY VOLATILITY,Medium,Long Straddle/Strangle
+TATASTEEL,NEUTRAL,Medium,Iron Condor
+TCS,BUY VOLATILITY,Medium,Long Straddle/Strangle
+TECHM,NEUTRAL,Medium,Iron Condor
+TIINDIA,BUY,Medium,Bull Call Spread
+TITAN,BUY VOLATILITY,Medium,Long Straddle/Strangle
+TORNTPHARM,BUY,Medium,Bull Call Spread
+TORNTPOWER,BUY,High,Bull Call Spread
+TRENT,NEUTRAL,Medium,Iron Condor
+TVSMOTOR,NEUTRAL,Medium,Iron Condor
+UBL,BUY,High,Bull Call Spread
+ULTRACEMCO,BUY VOLATILITY,Medium,Long Straddle/Strangle
+UNIONBANK,NEUTRAL,Medium,Iron Condor
+UNITDSPR,NEUTRAL,Medium,Iron Condor
+UPL,NEUTRAL,Medium,Iron Condor
+VBL,BUY VOLATILITY,Medium,Long Straddle/Strangle
+VEDL,NEUTRAL,Medium,Iron Condor
+VOLTAS,NEUTRAL,Medium,Iron Condor
+WIPRO,BUY VOLATILITY,Medium,Long Straddle/Strangle
+YESBANK,BUY VOLATILITY,Medium,Long Straddle/Strangle
+ZOMATO,BUY VOLATILITY,Medium,Long Straddle/Strangle
+ZYDUSLIFE,BUY VOLATILITY,Medium,Long Straddle/Strangle
