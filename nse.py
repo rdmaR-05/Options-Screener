@@ -79,13 +79,13 @@ def generate_trading_signal(row):
     strategy = "N/A"
     # Convert OI Ratio to numeric
     oi_ratio = row['OI Ratio']
-    if oi_ratio == '∞':
+    if oi_ratio == 'âˆž':
         oi_ratio = float('inf')
     else:
         oi_ratio = float(oi_ratio)
     risk_score = row['Risk Score']
     put_call_ratio = row.get('Put/Call Volume Ratio', 1.0)
-    # Trading signals logic
+    # Trading signals logic 
     if oi_ratio > 1.5 and risk_score < 40:
         signal = "BUY"
         confidence = "High" if oi_ratio > 2.0 else "Medium"
@@ -109,34 +109,39 @@ def generate_trading_signal(row):
         'Confidence': confidence,
         'Strategy': strategy
     }
-
 def create_risk_profile(symbol, df, charts_folder):
-    """Create a visual risk profile for the stock"""
     try:
-        plt.figure(figsize=(12, 8))
-        # Plot OI distribution
-        plt.subplot(2, 1, 1)
-        sns.barplot(x='STRIKE', y='Call_OI', data=df, color='green', alpha=0.6, label='Calls')
-        # For puts, negate the values for better visualization
+        # Create a figure with a single row of 2 plots
+        fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2, figsize=(12, 4))
+        
+        # oi distribution (Chart 1: Left)
+        sns.barplot(x='STRIKE', y='Call_OI', data=df, color='green', alpha=0.6, label='Calls', ax=ax1)
         put_data = df.copy()
         put_data['Put_OI.1'] = -put_data['Put_OI.1']
-        sns.barplot(x='STRIKE', y='Put_OI.1', data=put_data, color='red', alpha=0.6, label='Puts')
-        plt.title(f'{symbol} - Open Interest Distribution')
-        plt.legend()
-        plt.grid(True)
-        # Plot Volume distribution
-        plt.subplot(2, 1, 2)
-        plt.bar(df['STRIKE'] - 0.5, df['Call_VOLUME'], width=1, color='green', alpha=0.6, label='Call Volume')
-        plt.bar(df['STRIKE'] + 0.5, df['Put_VOLUME.1'], width=1, color='red', alpha=0.6, label='Put Volume')
-        plt.title(f'{symbol} - Trading Volume Distribution')
-        plt.xlabel('Strike Price')
-        plt.ylabel('Volume')
-        plt.legend()
-        plt.grid(True)
-        plt.tight_layout()
+        sns.barplot(x='STRIKE', y='Put_OI.1', data=put_data, color='red', alpha=0.6, label='Puts', ax=ax1)
+        ax1.set_title(f'{symbol} - Open Interest Distribution', fontsize=10)
+        ax1.legend(fontsize=8)
+        ax1.grid(True, alpha=0.3)
+        ax1.tick_params(axis='x', rotation=45, labelsize=7)
+        ax1.tick_params(axis='y', labelsize=7)
+
+        # Trading volume distribution (Chart 2: Right)
+        ax2.bar(df['STRIKE'] - 0.5, df['Call_VOLUME'], width=1, color='green', alpha=0.6, label='Call Volume')
+        ax2.bar(df['STRIKE'] + 0.5, df['Put_VOLUME.1'], width=1, color='red', alpha=0.6, label='Put Volume')
+        ax2.set_title(f'{symbol} - Trading Volume Distribution', fontsize=10)
+        ax2.set_xlabel('Strike Price', fontsize=8)
+        ax2.set_ylabel('Volume', fontsize=8)
+        ax2.legend(fontsize=8)
+        ax2.grid(True, alpha=0.3)
+        ax2.tick_params(axis='x', rotation=45, labelsize=7)
+        ax2.tick_params(axis='y', labelsize=7)
+    
+        plt.tight_layout(pad=2.5)
+        
         chart_path = os.path.join(charts_folder, f'{symbol}_risk_profile.png')
-        plt.savefig(chart_path)
-        plt.close()
+        plt.savefig(chart_path, dpi=120, bbox_inches="tight")
+        plt.close(fig)  # Explicitly close the figure to address the warning
+        
         return chart_path
     except Exception as e:
         print(f"Could not create chart for {symbol}: {e}")
@@ -216,22 +221,52 @@ def generate_html_report(summary_df, signals_df, charts_folder):
         <title>Options Market Analysis - {datetime.now().strftime('%Y-%m-%d')}</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
         <style>
+            body {{
+                background-color: #f9f9f9;
+                padding-top: 70px;
+            }}
             .card {{
                 margin-bottom: 20px;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.05);
             }}
             .card-header {{
-                background-color: #f8f9fa;
+                background-color: #e9ecef;
                 font-weight: bold;
             }}
             .table-responsive {{
                 max-height: 600px;
                 overflow-y: auto;
             }}
+            .navbar-brand {{
+                color: #007bff !important;
+            }}
         </style>
     </head>
     <body>
+        <!-- Floating Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">Options Dashboard</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#marketSentimentChart">Market Sentiment</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tradingSignalsChart">Trading Signals</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#risktable">Risk Tables</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#traderec">Trading Recommendations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#summarytable">Summary</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
         <div class="container-fluid mt-4">
             <div class="row mb-4">
                 <div class="col-12">
@@ -245,7 +280,7 @@ def generate_html_report(summary_df, signals_df, charts_folder):
                     <div class="card">
                         <div class="card-header">Market Sentiment</div>
                         <div class="card-body">
-                            <canvas id="marketSentimentChart" height="200"></canvas>
+                            <canvas id="marketSentimentChart" height="100"></canvas>
                         </div>
                     </div>
                 </div>
@@ -253,15 +288,16 @@ def generate_html_report(summary_df, signals_df, charts_folder):
                     <div class="card">
                         <div class="card-header">Trading Signals</div>
                         <div class="card-body">
-                            <canvas id="tradingSignalsChart" height="200"></canvas>
+                            <canvas id="tradingSignalsChart" height="100"></canvas>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="row mb-4">
                 <div class="col-md-6">
                     <div class="card">
-                        <div class="card-header">Top Risky Stocks</div>
+                        <div class="card-header" id ="risktable">Top Risky Stocks</div>
                         <div class="card-body">
                             <table class="table table-striped">
                                 <thead>
@@ -297,11 +333,11 @@ def generate_html_report(summary_df, signals_df, charts_folder):
                 </div>
             </div>
             
-            <!*-* Trading Signals *-*>
+            <!-- Trading Signals -->
             <div class="row mb-4">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header">Trading Recommendations</div>
+                        <div class="card-header" id ="traderec">Trading Recommendations</div>
                         <div class="card-body table-responsive">
                             <table class="table table-striped table-hover">
                                 <thead>
@@ -325,7 +361,7 @@ def generate_html_report(summary_df, signals_df, charts_folder):
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header">Options Analysis Summary</div>
+                        <div class="card-header" id = "summarytable">Options Analysis Summary</div>
                         <div class="card-body table-responsive">
                             <table class="table table-striped table-hover">
                                 <thead>
@@ -360,8 +396,8 @@ def generate_html_report(summary_df, signals_df, charts_folder):
             datasets: [{{
                 data: [{bullish_count}, {bearish_count}, {neutral_count}],
                 backgroundColor: [
-                    'rgba(0, 200, 83, 0.7)',  // Green
-                    'rgba(244, 67, 54, 0.7)', // Red
+                    'rgba(0, 255, 0, 1)',  // Green
+                    'rgba(255,0, 0, 1)', // Red
                     'rgba(255, 235, 59, 0.7)' // Yellow
                 ]
             }}]
@@ -389,8 +425,8 @@ def generate_html_report(summary_df, signals_df, charts_folder):
             datasets: [{{
                 data: [{buy_count}, {sell_count}, {hold_count}, {neutral_signal}],
                 backgroundColor: [
-                    'rgba(0, 200, 83, 0.7)',  // Green
-                    'rgba(244, 67, 54, 0.7)', // Red
+                    'rgba(0, 255, 0, 1)',  // Green
+                    'rgba(255, 0, 0, 1)', // Red
                     'rgba(255, 235, 59, 0.7)',// Yellow
                     'rgba(144, 164, 174, 0.7)'// Gray for Neutral
                 ]
@@ -410,7 +446,6 @@ def generate_html_report(summary_df, signals_df, charts_folder):
         }}
     }});
 </script>
-
     </body>
     </html>
     """
@@ -479,12 +514,11 @@ def process_options_data(folder_path, lot_size_dict, charts_folder):
                 chart_path = create_risk_profile(symbol, df, charts_folder)
                 # Store processed dataframe for later use
                 all_stocks_data[symbol] = df
-                # Store Summary
                 summary_row = {
                     'Stock': symbol,
                     'Call Capital': int(total_call_cap),
                     'Put Capital': int(total_put_cap),
-                    'OI Ratio': round(oi_ratio, 2) if put_oi_total != 0 else '∞',
+                    'OI Ratio': round(oi_ratio, 2) if put_oi_total != 0 else 'âˆž',
                     'Sentiment': sentiment,
                     'Unusual CALLs': len(unusual_calls),
                     'Unusual PUTs': len(unusual_puts),
@@ -494,7 +528,6 @@ def process_options_data(folder_path, lot_size_dict, charts_folder):
                     'ATM Strike': atm_strike,
                     'Implied Move': implied_move
                 }
-                # Add IV Skew if available
                 if iv_skew is not None:
                     summary_row['IV Skew'] = round(iv_skew, 2)
                 summary_rows.append(summary_row)
@@ -511,7 +544,7 @@ if __name__ == "__main__":
                 numeric_columns = ['Call Capital', 'Put Capital', 'Risk Score']
                 # Handling special oi ratio values
                 summary_df['OI Ratio Numeric'] = summary_df['OI Ratio'].apply(
-                    lambda x: float('inf') if x == '∞' else float(x))
+                    lambda x: float('inf') if x == 'âˆž' else float(x))
                 features = summary_df[numeric_columns + ['OI Ratio Numeric']].copy()
                 features.replace([float('inf'), -float('inf')], 9999, inplace=True)
                 scaler = StandardScaler()
@@ -538,7 +571,6 @@ if __name__ == "__main__":
         summary_df.to_csv(output_csv, index=False)
         signals_df.to_csv('trading_signals.csv', index=False)
         html_report = generate_html_report(summary_df, signals_df, charts_folder)
-        
         print(f"Analysis complete. Summary saved to '{output_csv}' with {len(summary_df)} entries.")
         print(f"Trading signals saved to 'trading_signals.csv' with {len(signals_df)} entries.")
         print(f"HTML report generated at '{html_report}'")
