@@ -1,10 +1,9 @@
 # Options Screener
 
-A Python-based tool that analyzes and filters stock options data from CSV files, generating a comprehensive HTML report and exporting actionable call and put options data into CSV files.
+A Python-based tool that analyzes and filters stock options data from CSV files, generating a comprehensive HTML report and exporting actionable call and put options data into CSV and Excel files.
 
 ## 📂 Project Structure
 
-- `main.py`: Orchestrates the data processing workflow.
 - `downloadcsv.py`: Handles downloading of raw options data.
 - `cleancsv.py`: Cleans and preprocesses the downloaded data.
 - `lotsize.py`: Calculates lot sizes for options contracts.
@@ -12,7 +11,6 @@ A Python-based tool that analyzes and filters stock options data from CSV files,
 - `risk_profiles/`: Directory containing risk assessment profiles.
 - `sample_data/`: Contains sample CSV files for testing.
 - `options_analysis_report.html`: Generated HTML report summarizing analysis.
-- `affordable_calls.xlsx`, `affordable_puts.xlsx`: Excel files with filtered call and put options.
 - `bulk_summary_output.csv`, `trading_signals.csv`: CSV files with summarized analysis results.
 
 ## 🔧 Features
@@ -39,13 +37,11 @@ Place your raw options CSV files into the sample_data/ directory.
 
 Run the main script:
 
-
 python main.py
 View results:
 
 Open options_analysis_report.html in your browser to view the analysis.
 
-Check the affordable_calls.xlsx and affordable_puts.xlsx files for filtered options data.
 
 🛠 Technologies Used
 -Python
@@ -58,4 +54,4 @@ Check the affordable_calls.xlsx and affordable_puts.xlsx files for filtered opti
 
 -seaborn
 
--openpyx
+-openpyxl
