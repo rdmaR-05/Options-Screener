@@ -1,53 +1,61 @@
-# Options-Screener
-A Python script that filters stock options and generates a pdf report
-# Stock Options Screener and Report Generator
+# Options Screener
 
-This project is a Python-based automation tool designed to analyze and filter stock options data from multiple CSV files and generate a comprehensive PDF report of actionable call and put options. It demonstrates skills in data manipulation, automation, and report generation using widely adopted Python libraries.
+A Python-based tool that analyzes and filters stock options data from CSV files, generating a comprehensive HTML report and exporting actionable call and put options data into CSV files.
 
----
+## 📂 Project Structure
 
-## Overview
+- `main.py`: Orchestrates the data processing workflow.
+- `downloadcsv.py`: Handles downloading of raw options data.
+- `cleancsv.py`: Cleans and preprocesses the downloaded data.
+- `lotsize.py`: Calculates lot sizes for options contracts.
+- `nse.py`: Contains functions specific to NSE data handling.
+- `risk_profiles/`: Directory containing risk assessment profiles.
+- `sample_data/`: Contains sample CSV files for testing.
+- `options_analysis_report.html`: Generated HTML report summarizing analysis.
+- `affordable_calls.xlsx`, `affordable_puts.xlsx`: Excel files with filtered call and put options.
+- `bulk_summary_output.csv`, `trading_signals.csv`: CSV files with summarized analysis results.
 
-The tool processes bulk options data—typically exported from trading platforms—and streamlines the task of identifying high-interest options by applying predefined filters. It then compiles the filtered results into a clean, readable PDF report.
+## 🔧 Features
 
-This project was created as a demonstration of practical Python scripting for real-world financial data analysis.
+- **Data Acquisition**: Downloads raw options data for analysis.
+- **Data Cleaning**: Processes and cleans the raw data for consistency.
+- **Lot Size Calculation**: Computes lot sizes for each options contract.
+- **Risk Assessment**: Evaluates risk profiles to filter options.
+- **Report Generation**: Produces an HTML report summarizing the analysis.
+- **Export Results**: Saves filtered call and put options into CSV and Excel files.
 
----
+## 🚀 Getting Started
 
-## Features
-
-- Reads and combines multiple CSV files (Calls and Puts)
-- Applies filters based on key metrics (e.g., open interest, premium, strike price)
-- Generates a structured PDF report summarizing selected options
-- Modular design for easy updates or integration with larger systems
-
----
-
-## Technologies Used
-
-- **Python 3**
-- `pandas` – for data loading, filtering, and transformation  
-- `glob` and `os` – for batch file handling  
-- `fpdf` – for generating PDF reports
-
----
-
-
----
-
-## How to Use
-
-1. Clone the repository or download the script.
-2. Place your input CSV files inside the `sample_data/` folder.
-3. Run the script:
+1. **Clone the repository**:
    ```bash
-   python main.py
----
+   git clone https://github.com/rdmaR-05/Options-Screener.git
+   cd Options-Screener
+Install dependencies:
 
-Let me know if you want to:
+pip install -r requirements.txt
+Prepare data:
 
-- Add a **LinkedIn link**
-- Include a **screenshot** of the PDF
-- Mention any **specific filters** you used (like “premium > 20”, etc.)
-- Change the license or remove it
+Place your raw options CSV files into the sample_data/ directory.
 
+Run the main script:
+
+
+python main.py
+View results:
+
+Open options_analysis_report.html in your browser to view the analysis.
+
+Check the affordable_calls.xlsx and affordable_puts.xlsx files for filtered options data.
+
+🛠 Technologies Used
+-Python
+
+-pandas
+
+-numpy
+
+-matplotlib
+
+-seaborn
+
+-openpyx
