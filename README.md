@@ -1,6 +1,6 @@
 # Options Screener
 
-A Python-based tool that analyzes and filters stock options data from CSV files, generating a comprehensive HTML report and exporting actionable call and put options data into CSV and Excel files.
+A Python-based tool that analyzes and filters stock options data from CSV files, generating a comprehensive HTML report.
 
 ## 📂 Project Structure
 
